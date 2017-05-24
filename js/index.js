@@ -3,6 +3,8 @@ require('babel-polyfill');
 var React = require('react');
 var ReactDOM = require('react-dom');
 
+var ProductTable = require('./components/ProductTable');
+
 var PRODUCTS = [
   {category: 'Sporting Goods', price: '$49.99', stocked: true, name: 'Football'},
   {category: 'Sporting Goods', price: '$9.99', stocked: true, name: 'Baseball'},
@@ -13,6 +15,7 @@ var PRODUCTS = [
 ];
 
 ReactDOM.render(
-	<h1>HI</h1>,
+	<ProductTable products={PRODUCTS} />,
   	document.getElementById('root')
 );
+
