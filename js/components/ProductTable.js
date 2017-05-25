@@ -11,7 +11,7 @@ function generateRows(data) {
 	for (let row of data) {
 		curCategory = row.category;
 		if (prevCategory !== curCategory) {
-			rows.push(<ProductCategoryRow key={row.cateeeegory} category={row.category} />);
+			rows.push(<ProductCategoryRow key={row.category} category={row.category} />);
 		}
 		rows.push(<ProductRow key={row.name} name={row.name} price={row.price} stocked={row.stocked} />)
 		prevCategory = curCategory;

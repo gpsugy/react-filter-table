@@ -2,7 +2,7 @@ var React = require('react');
 var ReactDOM = require('react-dom');
 
 function renderName(props) {
-	let elt = props.stocked ? <td>{props.name}</td> : <td className="outofstock">{props.name}</td>;
+	let elt = props.stocked ? <td key={props.name}>{props.name}</td> : <td key={props.name} className="outofstock">{props.name}</td>;
 	return elt;
 }
 
