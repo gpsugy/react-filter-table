@@ -3,14 +3,19 @@ var ReactDOM = require('react-dom');
 
 var ProductCategoryRow = require('./ProductCategoryRow');
 
-//function generateRows(data) {
-//	let rows;
-//	let curCategory;
-//	for (let row of data) {
-//		curCategory = row.category;
-//		rows += <tr>
-//	}
-//}
+function generateRows(data) {
+	let rows = [];
+	let curCategory;
+	let prevCategory = null;
+	for (let row of data) {
+		curCategory = row.category;
+		if (prevCategory !== curCategory) {
+			rows.push(<ProductCategoryRow key={row.category}/>);
+		}
+		prevCategory = curCategory;
+	}
+	return rows;
+}
 
 class ProductTable extends React.Component {
 	render() {
@@ -22,6 +27,9 @@ class ProductTable extends React.Component {
 						<td>Price</td>
 					</tr>
 				</thead>
+				<tbody>
+					{generateRows(this.props.products)}
+				</tbody>
 			</table>
 		);
 	}
