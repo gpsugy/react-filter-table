@@ -10,8 +10,9 @@ function generateRows(data) {
 	for (let row of data) {
 		curCategory = row.category;
 		if (prevCategory !== curCategory) {
-			rows.push(<ProductCategoryRow key={row.category}/>);
+			rows.push(<ProductCategoryRow key={row.category} category={row.category}/>);
 		}
+
 		prevCategory = curCategory;
 	}
 	return rows;

@@ -1,4 +1,8 @@
-// .product-table h1 {
-// 	display: inline-block;
-// 	font-size: 20px;
-// }
+.product-table thead {
+	font-weight: bold;
+}
+
+.product-table th {
+	text-align: left;
+	font-size: 15px;
+}
