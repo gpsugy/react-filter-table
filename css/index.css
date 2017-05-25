@@ -6,3 +6,7 @@
 	text-align: left;
 	font-size: 15px;
 }
+
+.outofstock {
+	color: red;
+}
