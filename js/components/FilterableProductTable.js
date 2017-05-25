@@ -3,7 +3,7 @@ var ReactDOM = require('react-dom');
 
 var SearchBar = require('./SearchBar');
 
-class ProductTable extends React.Component {
+class FilterableProductTable extends React.Component {
 	render() {
 		return (
 			<div>
@@ -13,4 +13,4 @@ class ProductTable extends React.Component {
 	}
 }
 
-module.exports = ProductTable;
+module.exports = FilterableProductTable;

@@ -3,7 +3,7 @@ require('babel-polyfill');
 var React = require('react');
 var ReactDOM = require('react-dom');
 
-var ProductTable = require('./components/ProductTable');
+var FilterableProductTable = require('./components/FilterableProductTable');
 
 var PRODUCTS = [
   {category: 'Sporting Goods', price: '$49.99', stocked: true, name: 'Football'},
@@ -15,7 +15,7 @@ var PRODUCTS = [
 ];
 
 ReactDOM.render(
-	<ProductTable products={PRODUCTS} />,
+	<FilterableProductTable products={PRODUCTS} />,
   	document.getElementById('root')
 );
 

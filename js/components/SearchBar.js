@@ -7,7 +7,7 @@ class SearchBar extends React.Component {
 			<div>
 				<form>
 					<input className="search-input" type="text" placeholder="Search..."/>
-					<div claslsName="checkbox-container">
+					<div className="checkbox-container">
 						<input className="checkbox" type="checkbox" checked="checked" /><span>Only show products in stock</span>
 					</div>
 				</form>
